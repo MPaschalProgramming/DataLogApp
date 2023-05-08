@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Menu </title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/jquery.mobile-1.3.1.min.css">
+      
+        <!-- JS -->
+        <script src="scripts/jquery-1.8.3.min.js"></script>
+        <script src="scripts/jquery.mobile-1.3.1.min.js"></script>
+
+   
+    
+      <meta name="viewport" content="width=device-width,
+      initial-scale=1.0"><!--set device-width-->
+
+  </head>
+
+  <body>
+    <div data-role="page" id="pageRecords">
+        <div data-role="header">
+            <a href="file:menu.html" data-role="button" data-icon="bars" data-iconpos="left" data-inline="true">Menu</a>
+            <a href="file:about.html" data-role="button" data-icon="info" data-iconpos="right" data-inline="true">Info</a>
+            <h1>Driver Fuel Consumption</h1>
+        </div>
+
+        <div data-role="navbar"><!--navbar data-role-->
+          <ul><!--begin unordered list-->
+            <li><a href="file:fuelCost.html">Driver Fuel App</a><!--link to fuelCost.html in navbar menu--></li>
+            <li><a href="file:log.html">Fuel Log</a><!--link to log.html in navbar menu--></li>
+            <li><a href="file:graph.html">Graph</a><!--link to graph.html in navbar menu--></li>
+        </ul>
+        </div>
+
+        <div data-role= header>Navigation Menu</div><!--header data-role-->
+
+
+        <div data-role="content">
+          <div data-role="controlgroup">
+
+<!-- Work Activity Log Section -->
+<div data-role="collapsible">
+    <h4>Log Driver Distance</h4>
+    <ul data-role="listview" id="lstWorkActivityLog">
+        <!-- Work activity logs will be dynamically added here -->
+    </ul>
+    <a href="file:fuelCost.html" data-role="button" data-icon="plus" data-iconpos="left" data-inline="true">New Entry</a>
+</div>
+
+<div data-role="collapsible">
+  <h4>Fuel Consumption Log</h4>
+  <div id="divLogSection">
+      <!-- User information will be dynamically added here -->
+  </div>
+  <a href="file:log.html" data-role="button" data-iconpos="left" data-inline="true">View Fuel Log</a>
+</div>
+
+<div data-role="collapsible">
+  <h4>Log Graph</h4>
+  <div id="divGraphSection">
+  </div>
+  <a href="file:graph.html" data-role="button" data-iconpos="left" data-inline="true">View Fuel Log Graph</a>
+</div>
+
+<div data-role="collapsible">
+  <h4>Logout</h4>
+  <div id="divLogoutSection">
+  </div>
+  <a href="file:index.html" data-role="button" data-iconpos="left" data-inline="true">Logout</a>
+</div>
+
+        </div>
+
+    </div>
+
+    <div data-role= footer><small>Fuel Cost Logging App</small></div><!--footer data-role-->
+
+</div>
+  </body>
+  </html>

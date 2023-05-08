@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Fuel Mileage Log</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/jquery.mobile-1.3.1.min.css">
+      
+        <!-- JS -->
+        <script src="scripts/jquery-1.8.3.min.js"></script>
+        <script src="scripts/jquery.mobile-1.3.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        <style>
+            h1 {
+              text-align: center;
+            }
+          </style>
+
+        <meta name="viewport" content="width=device-width,
+        initial-scale=1.0"><!--set device-width-->
+</head>
+<body>
+    <div data-role="page" id="pageRecords">
+        <div data-role="header">
+            <a href="file:menu.html" data-role="button" data-icon="bars" data-iconpos="left" data-inline="true">Menu</a>
+            <a href="file:about.html" data-role="button" data-icon="info" data-iconpos="right" data-inline="true">Info</a>
+            <h1>Driver Fuel Consumption</h1>
+        </div>
+
+        <div data-role="navbar"><!--navbar data-role-->
+          <ul><!--begin unordered list-->
+            <li><a href="file:fuelCost.html">Driver Fuel App</a><!--link to fuelCost.html in navbar menu--></li>
+            <li><a href="file:log.html" class="ui-btn-active ui-state-persist">Fuel Log</a><!--link to log.html in navbar menu--></li>
+            <li><a href="file:graph.html">Graph</a><!--link to graph.html in navbar menu--></li>
+        </ul>
+        </div>
+
+        <div data-role= header>Driver Fuel Log</div><!--header data-role-->
+
+
+	<h1>Fuel Mileage Log</h1>
+	<h2>Log:</h2>
+	<pre id="log"></pre>
+	<script>
+		var logFile = localStorage.getItem("logFile");
+		document.getElementById("log").innerHTML = logFile.replace(/\n/g, "<br>");
+	</script>
+    
+    <div data-role= footer><small>Fuel Log</small></div><!--footer data-role-->
+
+</div>
+</body>
+</html>
